@@ -4,13 +4,15 @@
 <meta name="Author" content="Chris Thomas" /><!--Created by Chris Thomas on Thursday, June 28, 2012-->
 <title>Are you emotion.ly...?</title><style type="text/css">
 *, :before, :after {position:relative; -webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
-html, body {font-family:Arial, Helvetica, sans-serif; color:#333; text-align:center;}
+html, body {font-family:Arial, Helvetica, sans-serif; color:#444; text-align:center;}
 a {color:#DC143C; text-decoration:none;} a:hover {text-decoration:underline;}
 .main {margin:0 auto; max-width:600px; opacity:0;}
-h1 {margin-top:2em; line-height:1px; text-shadow:1px 1px 0 #ccc; font-weight:500; font-size:7em; color:#f35626; -webkit-animation:hue 20s infinite; cursor:pointer;}
+header {font-size:2em; margin:3em auto; text-align:left; cursor:pointer;}
+h1 {margin-top:100px; line-height:1px; text-shadow:1px 1px 0 #ccc; font-weight:500; font-size:4em; color:#f35626; -webkit-animation:hue 20s infinite; text-align:center;}
 h2 {margin-top:2em; font-weight:500; font-size:2.5em; border-radius:20px; padding:20px; color:#f35626; -webkit-animation:hue 20s infinite;}
 section {display:block; opacity:0;}
 section > a, a:hover {color:#fff; font-size:3em; display:block; text-decoration:none; text-align:center;}
+input {border:0; padding:10px; font-size:18px; background:transparent; text-align:center;}
 .emo {border-radius:100%; width:50%; height:50%; padding:100px; opacity:0; float:left;}
 .happy {background:#cc0000; border-color:#990000;}
 .sad {background:#0099ff; border-color:#0000ff;}
@@ -28,8 +30,9 @@ footer {font-size:11px; color:#999; padding:10px; position:fixed; bottom:10px; r
   }
 }
 </style></head><body><div class="main">
-<header><h1>Emotion.ly</h1></header>
+<header>Hi, how are you <h1>Emotion.ly?</h1></header>
 <section>
+  <form name="santa" onsubmit="event.preventDefault(); return validate();"><input type="text" name="name" class="fname" placeholder="Your first name"></form>
   <h2>How do you feel?</h2>
   <a href="#" onclick="emo1();" class="emo happy">Happy</a> 
   <a href="#" onclick="emo2();" class="emo sad">Sad</a>
@@ -40,6 +43,8 @@ footer {font-size:11px; color:#999; padding:10px; position:fixed; bottom:10px; r
 </section>
 </div><footer><a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tiny.cc/emotionly" data-text="Check out a mental health app called emotion.ly!" data-via="cthomas1211">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script><br/>Built by <a href="http://theuiguru.github.io">@theuiguru</a> with &#x2665; for <a href="http://staticshowdown.com">staticshowdown</a>.</footer>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script><script type="text/javascript">
+//var name = "";
+//document.querySelector(".msg").innerHTML = "Hey " + name + ", how do you feel?";
 function emo1() { alert("I'm Happy!"); }
 function emo2() { alert("I'm Sad!"); }
 function emo3() { alert("I'm Mad!"); }
